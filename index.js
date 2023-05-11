@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { config } from 'dotenv'
 import express from 'express'
-import { GoogleSpreadsheet } from 'google-spreadsheet'
+import { GoogleSpreadsheet } from 'google-spreadsheet'  
 
 config()
 const app = express()
@@ -64,7 +64,7 @@ app.post('/new-message', async (req, res) => {
         chat_id: chatId,
         text: responseText
       })
-      res.send('Done')
+      res.send('Готово')
     } catch (e) {
       console.log(e)
       res.send(e)
